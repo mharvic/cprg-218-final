@@ -37,6 +37,11 @@ button{
     cursor: pointer;
 }
 
+button:focus{
+    color: yellow;
+    border: 1px solid yellow;
+}
+
 
 .weather{
     /* display:flex; */
@@ -63,25 +68,28 @@ nav{
     display:none;
 }
 
-nav ul li{
-    list-style-type: none;
-    display:inline;
-    margin-right:1.5rem;
+nav.active{
+    display:block;
 }
 
-nav ul li:last-of-type{
+nav ul{
+    width:100%;
+}
+
+nav ul li{
+    display:block;
+    text-align:center;
+    width:100%;
     margin-right:0;
 }
-
 nav ul li a{
-    color: #f4f4f4;
-    text-decoration:none;
+    color: #fff;
+    text-decoration: none;
+    display:block;
+    padding: 1.5rem;
 }
 
-nav ul li a:hover{
-    color: orange;
-    text-decoration:underline;
-}
+
 
 .hero{
     width:100%;
@@ -151,15 +159,13 @@ figcaption{
     padding: .75rem;
 }
 
-#accomodations > .container > .accomodation-items > img{
-    width:100%;
-    max-width:450px;
-}
-
 .accomodation-items{
     margin-top:2rem;
 }
 
+.accomodation-items > img{
+    width:100%;
+}
 
 
 
@@ -178,51 +184,50 @@ figcaption{
         display:block;
     }
 
-    button:focus{
-        color: yellow;
-        border: 1px solid yellow;
-    }
-
-    /* nav{
-        position:absolute;
-        top: 100%;
-        left:0;
-        z-index:100;
-        background-color: #333;
-        width:100%;
-        display:none;
-    } */
-
-    nav.active{
-        display:block;
-    }
-
-    nav ul{
-        width:100%;
-    }
-
-    nav ul li{
-        display:block;
-        text-align:center;
-        width:100%;
-        margin-right:0;
-    }
-    nav ul li a{
-        display:block;
-        padding: 1.5rem;
-    }
     .gallery-container{
         gap:1rem;
         grid-template-columns: repeat(2,1fr);
+    }
+
+    .accomodation-items{
+        display:flex;
+        gap: 1rem;
+        align-items:center;
+        justify-content: space-between;
+    }
+
+    .accomodation-items img{
+        max-width:470px;
     }
     
 }
 
 @media screen and (min-width: 1000px){
-
+    
     nav{
         display:flex;
+        position:relative;
     }
+
+    /* nav ul li{
+        list-style-type: none;
+        display:inline;
+        margin-right:1.5rem;
+    }
+    
+    nav ul li:last-of-type{
+        margin-right:0;
+    }
+    
+    nav ul li a{
+        color: #f4f4f4;
+        text-decoration:none;
+    }
+    
+    nav ul li a:hover{
+        color: orange;
+        text-decoration:underline;
+    } */
 
     button{
         display:none;

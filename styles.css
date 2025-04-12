@@ -15,7 +15,7 @@ header{
     color: #f4f4f4;
     position:relative;
     display:flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap:.5rem;
     padding: 1rem 1rem;
@@ -35,11 +35,11 @@ button{
     border:none;
     font-size: 200%;
     cursor: pointer;
-    display:none;
 }
 
+
 .weather{
-    display:flex;
+    /* display:flex; */
     text-align:center;
 }
 
@@ -54,7 +54,13 @@ button{
 }
 
 nav{
-    display:flex;
+    position:absolute;
+    top: 100%;
+    left:0;
+    z-index:100;
+    background-color: #333;
+    width:100%;
+    display:none;
 }
 
 nav ul li{
@@ -160,6 +166,7 @@ figcaption{
 @media screen and (min-width:768px){
 
     header{
+        justify-content: space-between;
     }
 
     .header-content{
@@ -176,7 +183,7 @@ figcaption{
         border: 1px solid yellow;
     }
 
-    nav{
+    /* nav{
         position:absolute;
         top: 100%;
         left:0;
@@ -184,7 +191,7 @@ figcaption{
         background-color: #333;
         width:100%;
         display:none;
-    }
+    } */
 
     nav.active{
         display:block;
@@ -212,6 +219,14 @@ figcaption{
 }
 
 @media screen and (min-width: 1000px){
+
+    nav{
+        display:flex;
+    }
+
+    button{
+        display:none;
+    }
     .gallery-container{
         grid-template-columns: repeat(4,1fr);
     }
@@ -222,7 +237,7 @@ figcaption{
         padding: 1rem 2.5rem;
     }
     #weathericon{
-        width:100px;
+        width:50px;
         display:block;
     }
 }

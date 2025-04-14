@@ -181,7 +181,7 @@ figcaption{
 
 .accomodation-items{
     margin-top:2rem;
-    background-color:#205781;
+    background-color:#E5D5C6;
     color: #fff;
     padding: 1rem;
     border-radius:20px;
@@ -195,6 +195,12 @@ figcaption{
 #beachfront{
     display:flex;
     flex-direction:column-reverse;
+}
+
+/* Accomodation */
+
+#accomodations{
+    color: #333;
 }
 
 /* Testimonial Section */
@@ -322,6 +328,7 @@ footer{
 
     .accomodation-items > img{
         max-width:750px;
+        border-radius:15px;;
     }
 
     .hero{

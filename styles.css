@@ -9,11 +9,48 @@
 /* Global Styles */
 
 p{
-    margin-top:.5rem;
+    margin:.5rem 0;
+    color: #333;
 }
 
 html{
     height:100%;
+    line-height: 200%;
+}
+
+ul{
+    margin-left:1rem;
+}
+
+span{
+    font-weight:800;
+}
+
+
+
+.primary-button{
+    border-radius:20px;
+    padding:1rem;
+    color:#fff;
+    background-color: #333;
+    margin-top:1rem;
+    display:inline-block;
+    width:75%;
+    text-align:center;
+}
+
+.primary-button:hover{
+    border-radius:20px;
+    padding:1rem;
+    color:#fff;
+    background-color: #205781;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
 }
 
 body{
@@ -21,13 +58,31 @@ body{
     font-family: Arial, sans-serif;
 }
 
-h1{
+ h1{
     font-family: "Merriweather", serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    text-shadow: 3px 3px 3px #333;
+    line-height:normal;
+}
+
+.hero > h1{
+    font-family: "Merriweather", serif;
+    font-size: 2.5rem;
     text-shadow: 3px 3px 3px #333;
 }
 
+h2{
+    font-family: "Merriweather", serif;
+    font-size: 2rem;
+    line-height:normal;
+}
 
+h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:1.5rem;
+    margin:1rem 0;
+    color: #333;
+}
 
 /* Header Section */
 
@@ -35,17 +90,19 @@ header{
     background-color: #205781;
     color: #f4f4f4;
     position:relative;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    gap:.5rem;
     padding: 1rem 1rem;
 }
 
 .header-content{
     display:flex;
     align-items:center;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.header-container{
+    padding-top:1rem;
+    max-width:1200px;
+    margin:0 auto;
 }
 
 /* Burger Icon */
@@ -62,9 +119,12 @@ button:focus{
     border: 1px solid yellow;
 }
 
-
 .weather{
     text-align:center;
+}
+
+#temperature{
+    color:#fff;
 }
 
 #weathericon{
@@ -72,9 +132,8 @@ button:focus{
     width:25px;
 }
 
-#logo{
-    max-width:175px;
-    width:100%;
+.logo{
+    width:175px;
 }
 
 nav{
@@ -85,6 +144,15 @@ nav{
     background-color:#205781;
     width:100%;
     display:none;
+}
+
+nav a.active{
+    font-weight:800;
+    color: #f9f9f9;
+}
+
+nav a:hover{
+    font-weight:600;
 }
 
 nav.active{
@@ -105,7 +173,7 @@ nav ul li a{
     color: #fff;
     text-decoration: none;
     display:block;
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 /* Hero Section */
@@ -141,13 +209,14 @@ nav ul li a{
 .ammenities{
     padding: 3.125rem 1.25rem;
     text-align:center;
-    background-image: url("./images/Ammenities.webp");
+    background-image: url("./images/Services-background.webp");
     background-repeat: no-repeat;
     background-size:cover;
 }
 
-.ammenities > h2{
-    color:#333;
+.ammenities > h2 {
+    color:#fff;
+    text-shadow: 3px 3px 3px #333;
 }
 
 .container{
@@ -166,18 +235,20 @@ nav ul li a{
 
 .gallery-container{
     display:grid;
+    gap:1rem;
 }
 
 figure{
-    background-color: #fff;
-    border: solid 1px #ccc;
-    box-shadow: 2px 3px #ccc;
-    margin-top:1.5rem;
+    background-color: #f4f5f5;
+    border: solid 1px #f4f5f5;
+    border-radius:20px;
+    box-shadow: 1px 1px #ccc;
 }
 
 figure > img{
     width:100%;
     border-bottom: solid 1px #f4f4f5;
+    border-radius:20px 20px 0px 0px;
 }
 
 figcaption{
@@ -186,7 +257,7 @@ figcaption{
 
 .accomodation-items{
     margin-top:2rem;
-    background-color:#E1DAD7;
+    background-color:#f4f5f5;
     color: #333;
     padding: 1rem;
     border-radius:20px;
@@ -208,28 +279,365 @@ figcaption{
 /* Testimonial Section */
 
 #testimonials{
-    background-color: #f4f4f5;
+    background-image: url('images/fresh-snow.png');
+    background-color:rgba(164, 150, 111, 0.4);
+    background-repeat: repeat;
     text-align:center;
+}
+
+.testimonial-list{
+    display:flex;
+    flex-direction:column;
+    margin:2rem 0;
+    gap: 1rem;
 }
 
 .testimonials-item{
     margin-top:.5rem;
     border:solid 1px #ccc;
-    padding:1.5rem;
+    background-color: #fff;
+    padding:3rem 1.5rem;
+    border-radius:20px;
 }
 
-#testimonial-text{
+.testimonial-text{
     text-align:left;
 }
 
-#testimonial-author{
+.testimonial-author{
     margin-top:1rem;
     text-align:right;
     font-weight:700;
 }
 
+#testimonials > div > a {
+    width:100%;
+}
+
 footer{
+    background-color:#205781;
+    color: #fff;
     text-align:center;
+}
+
+footer a.active{
+    font-weight:800;
+    color: #f9f9f9;
+}
+
+body > footer > div.disclaimer > p{
+    color: #fff;
+}
+
+footer h3{
+    color:#fff;
+}
+
+.footer-container{
+    padding: 3.125rem 1.25rem;
+}
+
+#footer-nav{
+    text-decoration:none;
+    list-style: none;
+    color:#fff;
+    text-align:left;
+    margin-top:1rem;
+}
+
+footer ul li a{
+    color:#fff;
+    text-decoration:none;
+    text-align:left;
+}
+
+footer ul li{
+    margin-top:1rem;
+}
+
+.footer-items{
+    color:fff;
+    display:flex;
+    flex-direction:column;
+    gap:1.5rem;
+    justify-content: space-between;
+    text-align:left;
+}
+
+body > footer > div.footer-container > div > div > p > a {
+    color:#fff;
+}
+
+iframe{
+    width:100%;
+}
+
+.disclaimer{
+    border-top: solid 1px #ccc;
+    padding: 1rem;
+}
+
+
+/* Accomodation Page */
+#accomodation-hero{
+    width:100%;
+    height:50vh;
+    padding: 1rem;
+    background-image:url("./images/hero-accomodation.webp");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    color:#fff;
+    text-align:center;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction:column;
+}
+
+#accomodation-hero > p{
+    color:#fff;
+}
+
+#first-section{
+    text-align:center;
+}
+
+.accomodation-items > div > ul {
+    margin-left:1rem;
+}
+
+#beachfront-suite{
+    display:flex;
+    flex-direction:column-reverse;
+}
+
+#premium-suite{
+    display:flex;
+    flex-direction:column-reverse;
+}
+
+/* Acitivities Page */
+
+.activities-list{
+    display:grid;
+    gap: 2rem;
+    margin-top:1rem;
+}
+
+.activities-list img {
+    width:100%;
+}
+
+.activities-list ul{
+    margin-left: 1rem;
+}
+
+#activities-hero{
+    width:100%;
+    height:50vh;
+    padding: 1rem;
+    background-image:url("./images/activities-hero.webp");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    color:#fff;
+    text-align:center;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction:column;
+}
+
+#activities-hero > p{
+    color:#fff;
+}
+
+#adventure-recreation{
+    background-color:lightblue;
+}
+
+#recreation-items > h3{
+    color: #333;
+}
+
+
+#activities > img{
+    width:100%;
+}
+
+#cultural{
+    background-color:lightblue;
+}
+
+#cultural > div > h3 {
+    color: #333;
+}
+
+#local-excursion-items{
+    display:grid;
+    gap:1rem;
+}
+
+#recreation-items{
+    display:grid;
+    gap:1rem;
+}
+
+#cultural-items{
+    display:grid;
+    gap:1rem;
+}
+
+#adventure-wild-life-items{
+    display:grid;
+    gap: 1rem;
+}
+
+#booking{
+    background-color:#f4f5f5;
+}
+
+/* Dinning Page*/
+
+#dinning-hero{
+    width:100%;
+    height:50vh;
+    padding: 1rem;
+    background-image:url("/images/fine-dine.webp");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    color:#fff;
+    text-align:center;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction:column;
+}
+
+#dinning-hero > div > p{
+    color:#fff;
+}
+
+.dinning-items{
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+}
+
+.mini-title{
+    border-left: solid 3px #333;
+    padding-left: 1rem;
+}
+
+main > img{
+    border-radius:20px;
+    width:100%;
+}
+
+#sand-bar{
+    background-color:#205781;
+    color:#fff;
+}
+
+#sand-bar p{
+    color:#fff;
+}
+
+#sand-bar > div > div > div > p.mini-title{
+    border-left: solid 3px #fff;
+}
+
+.dinning-items-reverse{
+    display:flex;
+    flex-direction:column-reverse;
+    gap: 2rem;
+}
+
+main > section > div > div > img{
+    border-radius:20px;
+    border: solid 1px #f4f5f5;
+}
+
+#lobby-lounge{
+    background-color: lightblue;
+}
+
+#dinning-options-items{
+    display:grid;
+    gap:1rem;
+}
+
+/* Spa Page */
+
+#spa-hero{
+    width:100%;
+    height:50vh;
+    padding: 1rem;
+    background-image:url("./images/spa-hero.webp");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    color:#fff;
+    text-align:center;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction:column;
+}
+
+.spa-items{
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+    margin-top:1rem;
+}
+
+.spa-items-reverse{
+    display:flex;
+    flex-direction: column-reverse;
+    gap:2rem;
+    margin-top:1rem;
+}
+
+#manicure{
+    background-color:lightblue;
+}
+
+#massage > div > div > div > p {
+    margin:0;
+}
+
+#wellness-program{
+    background-color:lightblue;
+
+    /* Testimonials Page */
+}
+
+#testimonials-hero{
+    width:100%;
+    height:50vh;
+    padding: 1rem;
+    background-image:url("./images/testimonials-hero.webp");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    color:#fff;
+    text-align:center;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction:column;
+}
+
+#testimonials-hero > div > p{
+    color:#fff;
+}
+
+#testi-list{
+    display:grid;
+    gap:1rem;
 }
 
 
@@ -256,39 +664,97 @@ footer{
         padding: 8rem 2.5rem;;
     }
 
-    .ammenities > h2 {
-        color:#fff;
-    }
-
     .gallery-container{
         gap:1rem;
         grid-template-columns: repeat(2,1fr);
     }
 
-    .accomodation-items{
-        display:flex;
-        align-items:center;
-        justify-content: space-between;
-        gap: 2rem;
-    }
-
-    #beachfront{
-        flex-direction: row;
-    }
-
     .testimonial-list{
-        display:flex;
-        gap: 1rem;
+        flex-direction:row;
     }
 
-    footer{
-        background-color:#205781;
-        color:#fff;
+    #testimonials > div > a {
+        width:40%;
     }
-    
+
+    .footer-items{
+        flex-direction:row;
+    }
+
+    /* Activities Page */
+
+    .activities-list{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .activities-span-2{
+        grid-column:span 2;
+    }
+
+    .activities-span-3{
+        grid-column:span 3;
+    }
+
+    #recreation-items{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    #cultural-items{
+        grid-template-columns:repeat(2,1fr);
+    }
+    #adventure-wild-life-items{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    /*Dinning Page*/
+
+    #dinning-hero{
+        height:90vh;
+    }
+
+    #dinning-options-items{
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+    #dinning-last-item:last-child{
+        grid-column:span 2;
+    }
+
+    main > section > div > div > img{
+        max-width:600px;
+        margin: 0 auto;
+    }
+
+    #rooms > div > div > img{
+        max-width:100%;
+        margin: 0 auto;
+    }
+
+
+    /*Spa Page*/
+
+    /* section > div > div > img{
+        max-width:600px;
+        margin:0 auto;
+    } */
+
+    /* Testimonials Page */
+
+    #testi-list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 1000px){  
+
+    .logo{
+        width:250px;
+    }
+
+    h2{
+        font-size:3rem;
+    }
     
     nav{
         display:flex;
@@ -304,11 +770,7 @@ footer{
     button{
         display:none;
     }
-    .gallery-container{
-        padding:0 1.5rem;
-        margin-top:1.125rem;
-        grid-template-columns: repeat(4,1fr);
-    }
+    
     header{
         justify-content: space-between;
         align-items:center;
@@ -327,13 +789,30 @@ footer{
         display:block;
     }
 
+    .gallery-container{
+        padding:0 1.5rem;
+        margin-top:1.125rem;
+        grid-template-columns: repeat(4,1fr);
+    }
+
     .container{
         padding: 6rem 2.5rem; 
     }
 
+    .accomodation-items{
+        display:flex;
+        align-items:center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
     .accomodation-items > img{
-        max-width:750px;
+        width:100%;
         border-radius:15px;;
+    }
+
+      #beachfront{
+        flex-direction: row;
     }
 
     .hero{
@@ -348,7 +827,109 @@ footer{
         background-size: cover;
     }
 
-    .testimonial-list{
-        margin:2rem 0;
+    .footer-container{
+        max-width:1200px;
+        margin: 0 auto;
+        padding: 3rem 2.5rem; 
+    }
+
+    /* Accomodation Page */
+
+    #accomodation-hero{
+        height:90vh;
+    }
+    #beachfront-suite{
+        flex-direction:row;
+    }
+
+    #premium-suite{
+        flex-direction:row;
+    }
+    
+    /* Activities Page */
+
+    #activities-hero{
+        height:90vh;
+    }
+
+    .activities-list{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    #local-excursion-items{
+        grid-template-columns:repeat(2,1fr);
+    }
+    #adventure-life{
+        grid-column: span 2;
+    }
+
+    #recreation-items{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    #cultural-items{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    #adventure-wild-life-items{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    #booking > div > ul{
+        column-count: 2;
+    }
+    /*Dinning Page*/
+
+    .dinning-items{
+        flex-direction:row;
+        align-items: center;
+    }
+
+    .dinning-items-reverse{
+        flex-direction:row;
+    }
+    #dinning-options-items{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    #dinning-last-item:last-child{
+        grid-column: span 1;
+    }
+
+    main > section > div > div > img{
+        max-width:100%;
+        margin: 0 auto;
+    }
+
+    /* Spa Page */
+
+    #spa-hero{
+        height:90vh;
+    }
+
+    .spa-items{
+        flex-direction:row;
+        align-items:center;
+    }
+
+    .spa-items-reverse{
+        flex-direction:row;
+        align-items:center;
+    }
+
+    #facial{
+        background-color:lightblue;
+    }
+
+    /*Testimonials Page*/
+
+    #testimonials-hero{
+        height:90vh;
+    }
+
+    .testimonials-item:last-child{
+        grid-column: span 2;
     }
 }
+
+

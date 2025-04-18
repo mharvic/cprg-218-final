@@ -504,7 +504,7 @@ iframe{
     width:100%;
     height:50vh;
     padding: 1rem;
-    background-image:url("/images/fine-dine.webp");
+    background-image:url("./images/fine-dine.webp");
     background-size:cover;
     background-repeat: no-repeat;
     background-position:bottom;

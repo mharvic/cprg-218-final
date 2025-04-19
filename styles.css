@@ -100,7 +100,6 @@ header{
 }
 
 .header-container{
-    padding-top:1rem;
     max-width:1200px;
     margin:0 auto;
 }
@@ -115,8 +114,7 @@ button{
 }
 
 button:focus{
-    color: yellow;
-    border: 1px solid yellow;
+    border: 1px solid lightblue;
 }
 
 .weather{
@@ -133,6 +131,7 @@ button:focus{
 }
 
 .logo{
+    margin-top:.6rem;
     width:175px;
 }
 
@@ -776,6 +775,10 @@ main > section > div > div > img{
         align-items:center;
         gap:1rem;
         padding: 1rem 2.5rem;
+    }
+
+    .header-content{
+        justify-content:center;
     }
 
     .weather{
